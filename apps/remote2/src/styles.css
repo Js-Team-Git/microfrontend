@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+.header{
+    position: relative;
+}
+.row .remote{
+    position: absolute;
+    top: -10px;
+    left: 44%;
+}
+.navigateTo{
+    display: flex;
+    justify-content: center;
+}
+
 .landingPage{
     display: flex;
     justify-content: center;
@@ -7,7 +21,7 @@
 }
 
 .header h1{
-    color: rgba(70, 2, 2, 0.92);
+    color: rgba(37, 2, 70, 0.92);
 }
 
 button a {
@@ -27,4 +41,18 @@ button:hover{
     background-color: rgb(7, 255, 7);
 }
 
+.landingPage.one,
+.landingPage.two{
+    height: 75vh;
+    width: 100%;
+}
 
+.landingPage.one{
+    background-color: rgba(241, 247, 245, 0.66);
+    color: rgba(38, 38, 154, 0.731);
+}
+
+.landingPage.two{
+    background-color: rgba(186, 231, 253, 0.66);
+    color: rgba(89, 25, 25, 0.687);
+}

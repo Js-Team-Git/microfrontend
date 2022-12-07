@@ -1,19 +1,19 @@
 {
-  "name": "shell-e2e",
+  "name": "remote-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/shell-e2e/src",
+  "sourceRoot": "apps/remote-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/shell-e2e/cypress.config.ts",
-        "devServerTarget": "shell:serve:development",
+        "cypressConfig": "apps/remote-e2e/cypress.config.ts",
+        "devServerTarget": "remote:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "shell:serve:production"
+          "devServerTarget": "remote:serve:production"
         }
       }
     },
@@ -24,13 +24,13 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/shell-e2e/**/*.{js,ts}"
+          "apps/remote-e2e/**/*.{js,ts}"
         ]
       }
     }
   },
   "tags": [],
   "implicitDependencies": [
-    "shell"
+    "remote"
   ]
 }

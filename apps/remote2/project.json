@@ -1,8 +1,8 @@
 {
-  "name": "shell",
+  "name": "remote2",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/shell/src",
+  "sourceRoot": "apps/remote2/src",
   "prefix": "microfrontend",
   "targets": {
     "build": {
@@ -11,23 +11,23 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/shell",
-        "index": "apps/shell/src/index.html",
-        "main": "apps/shell/src/main.ts",
+        "outputPath": "dist/apps/remote2",
+        "index": "apps/remote2/src/index.html",
+        "main": "apps/remote2/src/main.ts",
         "polyfills": [
           "zone.js"
         ],
-        "tsConfig": "apps/shell/tsconfig.app.json",
+        "tsConfig": "apps/remote2/tsconfig.app.json",
         "assets": [
-          "apps/shell/src/favicon.ico",
-          "apps/shell/src/assets"
+          "apps/remote2/src/favicon.ico",
+          "apps/remote2/src/assets"
         ],
         "styles": [
-          "apps/shell/src/styles.css"
+          "apps/remote2/src/styles.css"
         ],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/shell/webpack.config.js"
+          "path": "apps/remote2/webpack.config.js"
         },
         "commonChunk": false
       },
@@ -47,7 +47,7 @@
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/shell/webpack.prod.config.js"
+            "path": "apps/remote2/webpack.prod.config.js"
           }
         },
         "development": {
@@ -65,31 +65,31 @@
       "executor": "@nrwl/angular:webpack-dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "shell:build:production"
+          "browserTarget": "remote2:build:production"
         },
         "development": {
-          "browserTarget": "shell:build:development"
+          "browserTarget": "remote2:build:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 4200,
-        "publicHost": "http://localhost:4200"
+        "port": 4202,
+        "publicHost": "http://localhost:4202"
       }
     },
     "extract-i18n": {
       "executor": "ngx-build-plus:extract-i18n",
       "options": {
-        "browserTarget": "shell:build",
-        "extraWebpackConfig": "apps/shell/webpack.config.js"
+        "browserTarget": "remote2:build",
+        "extraWebpackConfig": "apps/remote2/webpack.config.js"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/shell/**/*.ts",
-          "apps/shell/**/*.html"
+          "apps/remote2/**/*.ts",
+          "apps/remote2/**/*.html"
         ]
       }
     },
@@ -99,7 +99,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "apps/shell/jest.config.ts",
+        "jestConfig": "apps/remote2/jest.config.ts",
         "passWithNoTests": true
       }
     }
